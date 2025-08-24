@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-g",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/martinmoloeznik/probandoRaylib",
+    "file": "/home/martinmoloeznik/probandoRaylib/main.c",
+    "output": "/home/martinmoloeznik/probandoRaylib/main.o"
+  }
+]
