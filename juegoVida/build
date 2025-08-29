@@ -1,0 +1,4 @@
+#!/bin/bash
+# Compilar todos los .c en el directorio actual en un ejecutable llamado "juego"
+
+gcc *.c -o juego -lraylib -lm -ldl -lpthread -lGL -lrt -lX11 -Wall -g
