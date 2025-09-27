@@ -1,0 +1,1 @@
+emcc main.c -o juego.html     -I ~/raylib/src     ~/raylib/src/libraylib.web.a     -s USE_GLFW=3     -s ASYNCIFY     -s TOTAL_MEMORY=67108864     --shell-file ~/raylib/src/minshell.html

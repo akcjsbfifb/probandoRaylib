@@ -1,10 +1,8 @@
 #include "raylib.h"
-#include <math.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <stdlib.h>
-#include <stdio.h>
-
+#include <emscripten/emscripten.h>  // 👈 necesario para web
+//
 #define MAP_SIZE 9
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 450
@@ -69,14 +67,9 @@ bool piezaEntraCoord(Mapa *mapa, Pieza3 pieza, int x, int y);
 void analizarColumn(Mapa *mapa);
 void analizarFilas(Mapa *mapa);
 
-int main(void) {
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Mi primer juego en C con Raylib");
-
-  Mapa mapa;
-
-  limpiarMapaInicial(&mapa);
-  SetTargetFPS(60);
-  while (!WindowShouldClose()) {
+Mapa mapa;
+// 🔹 función que reemplaza al while
+void UpdateDrawFrame(void) {
     analizarFilas(&mapa);
     analizarColumn(&mapa);
 
@@ -88,8 +81,6 @@ int main(void) {
     mostrarPieza(columna);
     EndDrawing();
 
-    // Primero limpiamos el mapa (para que no queden restos de la pieza en otra
-    // pos)
     if(IsMouseButtonDown(MOUSE_BUTTON_LEFT)){
         limpiarMapa(&mapa);
 
@@ -100,18 +91,25 @@ int main(void) {
         encontrarColision(&mapa, &linea);
         encontrarColision(&mapa, &cubo);
         encontrarColision(&mapa, &columna);
-    }else{
+    } else {
        resetPieza(&linea);
        resetPieza(&cubo);
        resetPieza(&columna);
        consolidarMapa(&mapa);
     }
-  }
-
-  CloseWindow();
-  return 0;
 }
+int main(void) {
+   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Mi primer juego en C con Raylib");
 
+    limpiarMapaInicial(&mapa);
+    SetTargetFPS(60);
+
+    // 👇 en vez de while usamos esto:
+    emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
+
+    CloseWindow(); // nunca llega en web, pero lo dejamos
+    return 0;
+}
 void consolidarMapa(Mapa *mapa){
   for (int i = 0; i < MAP_SIZE; i++) {
     for (int j = 0; j < MAP_SIZE; j++) {
