@@ -1,16 +1,7 @@
 [
   {
-    "arguments": [
-      "/usr/bin/gcc",
-      "-Wall",
-      "-g",
-      "-c",
-      "-o",
-      "main.o",
-      "main.c"
-    ],
-    "directory": "/home/martinmoloeznik/probandoRaylib",
-    "file": "/home/martinmoloeznik/probandoRaylib/main.c",
-    "output": "/home/martinmoloeznik/probandoRaylib/main.o"
+    "directory": "/home/martinmoloeznik/proyecto", 
+    "command": "emcc -I/home/martinmoloeznik/raylib/src -I/home/martinmoloeznik/emsdk/upstream/emscripten/cache/sysroot/include -c main.c",
+    "file": "main.c"
   }
 ]
