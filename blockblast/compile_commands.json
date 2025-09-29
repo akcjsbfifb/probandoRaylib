@@ -1,7 +1,58 @@
 [
   {
-    "directory": "/home/martinmoloeznik/proyecto", 
-    "command": "emcc -I/home/martinmoloeznik/raylib/src -I/home/martinmoloeznik/emsdk/upstream/emscripten/cache/sysroot/include -c main.c",
-    "file": "main.c"
+    "arguments": [
+      "/home/akcjsbfifb/emsdk/upstream/bin/clang",
+      "-target",
+      "wasm32-unknown-emscripten",
+      "-fignore-exceptions",
+      "-mllvm",
+      "-combiner-global-alias-analysis=false",
+      "-mllvm",
+      "-enable-emscripten-sjlj",
+      "-mllvm",
+      "-disable-lsr",
+      "--sysroot=/home/akcjsbfifb/emsdk/upstream/emscripten/cache/sysroot",
+      "-DEMSCRIPTEN",
+      "-Xclang",
+      "-iwithsysroot/include/fakesdl",
+      "-Xclang",
+      "-iwithsysroot/include/compat",
+      "-I/home/akcjsbfifb/raylib/src",
+      "-c",
+      "-o",
+      "/tmp/emscripten_temp_8wd8849x/mostrarPiezas_0.o",
+      "mostrarPiezas.c"
+    ],
+    "directory": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast",
+    "file": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast/mostrarPiezas.c",
+    "output": "/tmp/emscripten_temp_8wd8849x/mostrarPiezas_0.o"
+  },
+  {
+    "arguments": [
+      "/home/akcjsbfifb/emsdk/upstream/bin/clang",
+      "-target",
+      "wasm32-unknown-emscripten",
+      "-fignore-exceptions",
+      "-mllvm",
+      "-combiner-global-alias-analysis=false",
+      "-mllvm",
+      "-enable-emscripten-sjlj",
+      "-mllvm",
+      "-disable-lsr",
+      "--sysroot=/home/akcjsbfifb/emsdk/upstream/emscripten/cache/sysroot",
+      "-DEMSCRIPTEN",
+      "-Xclang",
+      "-iwithsysroot/include/fakesdl",
+      "-Xclang",
+      "-iwithsysroot/include/compat",
+      "-I/home/akcjsbfifb/raylib/src",
+      "-c",
+      "-o",
+      "/tmp/emscripten_temp_8wd8849x/main_1.o",
+      "main.c"
+    ],
+    "directory": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast",
+    "file": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast/main.c",
+    "output": "/tmp/emscripten_temp_8wd8849x/main_1.o"
   }
 ]

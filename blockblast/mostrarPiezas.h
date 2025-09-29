@@ -9,7 +9,7 @@
 #include <emscripten.h>
 
 #define MAP_SIZE 9
-#define SCREEN_WIDTH 1740
+#define SCREEN_WIDTH 1400
 #define SCREEN_HEIGHT 900
 #define ALTURA_MAPA 200
 
