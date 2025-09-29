@@ -10,7 +10,7 @@ int main(void) {
     SetTargetFPS(60);
 
     generarPiezas();
-    // 👇 en vez de while usamos esto:
+
     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
 
     CloseWindow(); // nunca llega en web, pero lo dejamos

@@ -234,6 +234,7 @@ void generarPiezas(){
     }
     
 }
+
 //
 void UpdateDrawFrame(void) {
     analizarFilas();
@@ -274,7 +275,7 @@ void UpdateDrawFrame(void) {
 
 void consolidarPiezaEnMapa(Pieza *pieza) {
     // Convertir posición de la pieza a coordenadas del mapa
-    int filaBase = (int)((pieza->pos.y - 50) / 30);
+    int filaBase = (int)((pieza->pos.y - ALTURA_MAPA) / 30);
     int coluBase = (int)((pieza->pos.x - POS_FIRST) / 30);
 
     for (int i = 0; i < 4; i++) {       // filas de la pieza
@@ -363,7 +364,7 @@ void analizarFilas(){
 void encontrarColision(Pieza *pieza) {
   // Convertir posición en coordenadas del mapa (columna/fila base)
   int colu = (int)((pieza->pos.x - POS_FIRST) / 30);
-  int fila = (int)((pieza->pos.y - 50) / 30);
+  int fila = (int)((pieza->pos.y - ALTURA_MAPA) / 30);
 
   // Recorremos la matriz 3x3 de la pieza
   //
@@ -401,11 +402,11 @@ void mostrarMapa() {
   for (int i = 0; i < MAP_SIZE; i++) {
     for (int j = 0; j < MAP_SIZE; j++) {
       if (mapa.mapa[i][j] == 0)
-        DrawRectangle(POS_FIRST + j * 30, 50 + i * 30, 29, 29, GRAY);
+        DrawRectangle(POS_FIRST + j * 30, ALTURA_MAPA + i * 30, 29, 29, GRAY);
       if (mapa.mapa[i][j] == 1)
-        DrawRectangle(POS_FIRST + j * 30, 50 + i * 30, 29, 29, ORANGE);
+        DrawRectangle(POS_FIRST + j * 30, ALTURA_MAPA + i * 30, 29, 29, ORANGE);
       if (mapa.mapa[i][j] == 2)
-        DrawRectangle(POS_FIRST + j * 30, 50 + i * 30, 29, 29, RED);
+        DrawRectangle(POS_FIRST + j * 30, ALTURA_MAPA + i * 30, 29, 29, RED);
     }
   }
 }

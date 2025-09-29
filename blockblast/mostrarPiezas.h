@@ -9,12 +9,13 @@
 #include <emscripten.h>
 
 #define MAP_SIZE 9
-#define SCREEN_WIDTH 800
-#define SCREEN_HEIGHT 450
+#define SCREEN_WIDTH 1740
+#define SCREEN_HEIGHT 900
+#define ALTURA_MAPA 200
 
 #define CANT_PIEZAS 20
 
-#define HEIGHT_PIEZAS 70 + 30 * 9
+#define HEIGHT_PIEZAS ALTURA_MAPA + 20 + 30 * 9
 #define POS_FIRST (SCREEN_WIDTH / 2.0f - 30 * 4.5f)
 #define POS_SECOND (SCREEN_WIDTH / 2.0f - 30 * 1.5f)
 #define POS_THIRD (SCREEN_WIDTH / 2.0f + 30 * 1.5f)
