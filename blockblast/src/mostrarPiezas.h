@@ -6,10 +6,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include <emscripten.h>
 
+// #define PLATFORM_WEB 
+#if defined(PLATFORM_WEB) 
+#include <emscripten.h> 
+#endif
 #define MAP_SIZE 9
-#define SCREEN_WIDTH 1400
+#define SCREEN_WIDTH 450
 #define SCREEN_HEIGHT 900
 #define ALTURA_MAPA 200
 

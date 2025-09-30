@@ -1,4 +1,4 @@
-emcc mostrarPiezas.c main.c \
+emcc src/mostrarPiezas.c src/main.c \
     -o juego.html \
     -I ~/raylib/src \
     ~/raylib/src/libraylib.web.a \

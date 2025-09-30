@@ -1,7 +1,7 @@
 [
   {
     "arguments": [
-      "/home/akcjsbfifb/emsdk/upstream/bin/clang",
+      "/home/martinmoloeznik/emsdk/upstream/bin/clang",
       "-target",
       "wasm32-unknown-emscripten",
       "-fignore-exceptions",
@@ -11,25 +11,25 @@
       "-enable-emscripten-sjlj",
       "-mllvm",
       "-disable-lsr",
-      "--sysroot=/home/akcjsbfifb/emsdk/upstream/emscripten/cache/sysroot",
+      "--sysroot=/home/martinmoloeznik/emsdk/upstream/emscripten/cache/sysroot",
       "-DEMSCRIPTEN",
       "-Xclang",
       "-iwithsysroot/include/fakesdl",
       "-Xclang",
       "-iwithsysroot/include/compat",
-      "-I/home/akcjsbfifb/raylib/src",
+      "-I/home/martinmoloeznik/raylib/src",
       "-c",
       "-o",
-      "/tmp/emscripten_temp_8wd8849x/mostrarPiezas_0.o",
+      "/tmp/emscripten_temp_41fgy9_e/mostrarPiezas_0.o",
       "mostrarPiezas.c"
     ],
-    "directory": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast",
-    "file": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast/mostrarPiezas.c",
-    "output": "/tmp/emscripten_temp_8wd8849x/mostrarPiezas_0.o"
+    "directory": "/home/martinmoloeznik/probandoRaylib/blockblast",
+    "file": "/home/martinmoloeznik/probandoRaylib/blockblast/mostrarPiezas.c",
+    "output": "/tmp/emscripten_temp_41fgy9_e/mostrarPiezas_0.o"
   },
   {
     "arguments": [
-      "/home/akcjsbfifb/emsdk/upstream/bin/clang",
+      "/home/martinmoloeznik/emsdk/upstream/bin/clang",
       "-target",
       "wasm32-unknown-emscripten",
       "-fignore-exceptions",
@@ -39,20 +39,20 @@
       "-enable-emscripten-sjlj",
       "-mllvm",
       "-disable-lsr",
-      "--sysroot=/home/akcjsbfifb/emsdk/upstream/emscripten/cache/sysroot",
+      "--sysroot=/home/martinmoloeznik/emsdk/upstream/emscripten/cache/sysroot",
       "-DEMSCRIPTEN",
       "-Xclang",
       "-iwithsysroot/include/fakesdl",
       "-Xclang",
       "-iwithsysroot/include/compat",
-      "-I/home/akcjsbfifb/raylib/src",
+      "-I/home/martinmoloeznik/raylib/src",
       "-c",
       "-o",
-      "/tmp/emscripten_temp_8wd8849x/main_1.o",
+      "/tmp/emscripten_temp_41fgy9_e/main_1.o",
       "main.c"
     ],
-    "directory": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast",
-    "file": "/home/akcjsbfifb/Downloads/proyectoMartoGaga/blockblast/main.c",
-    "output": "/tmp/emscripten_temp_8wd8849x/main_1.o"
+    "directory": "/home/martinmoloeznik/probandoRaylib/blockblast",
+    "file": "/home/martinmoloeznik/probandoRaylib/blockblast/main.c",
+    "output": "/tmp/emscripten_temp_41fgy9_e/main_1.o"
   }
 ]
